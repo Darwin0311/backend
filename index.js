@@ -47,7 +47,7 @@ app.use("/facturas", rutaFacturas);
 app.use("/pago", rutaPago);
 // app.use("/recuperar_contrasena", recuperar_contrasena);
 
-app.get("/", (req, res) => {
+app.get("/server", (req, res) => {
   // Mensajes de pagina principal.
   res.send("¡Hola! Este es el servidor backend!");
   console.log("¡Hola! Este es el servidor backend!");
