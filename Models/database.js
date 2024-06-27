@@ -1,4 +1,21 @@
 // Usamos esta arquitectura escalable y buenas practicas.
+const fs = require("fs");
+const path = require("path");
+
+const caCertPath = path.join(
+  __dirname,
+  "../certs/DigiCertGlobalRootCA.crt.pem"
+);
+
+let caCert;
+
+try {
+  caCert = fs.readFileSync(caCertPath);
+} catch (error) {
+  console.error(`Error al leer el certificado: ${error.message}`);
+  process.exit(1);
+}
+
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
