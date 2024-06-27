@@ -44,8 +44,14 @@ app.use("/selectnombre", rutaSelecttrabajador);
 app.use("/proveedores", NombreProveedor);
 app.use("/selectid", rutaIdSelect);
 app.use("/facturas", rutaFacturas);
-app.use("/pago", rutaPago); 
+app.use("/pago", rutaPago);
 // app.use("/recuperar_contrasena", recuperar_contrasena);
+
+app.get("/", (req, res) => {
+  // Mensajes de pagina principal.
+  res.send("¡Hola! Este es el servidor backend!");
+  console.log("¡Hola! Este es el servidor backend!");
+});
 
 const PORT = process.env.PORT || 3000;
 
