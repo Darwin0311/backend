@@ -23,6 +23,7 @@ const app = express();
 
 const corsOptions = {
   origin: "https://frontendsofacto-darwin0311s-projects.vercel.app/",
+  
   methods: "GET,POST,PUT,DELETE",
 };
 app.use(cors(corsOptions));
